@@ -18,6 +18,7 @@ import {
   Cpu,
   Terminal,
   Rocket,
+  Pencil,
 
 } from 'lucide-react';
 
@@ -107,10 +108,12 @@ const TechPortfolio: React.FC = () => {
   ];
 
   const techStack = [
-    { name: "Frontend", icon: Code2, items: ["React", "Vue 3", "Angular", "Next.js", "Svelte"], color: "from-cyan-400 to-blue-500" },
-    { name: "Backend", icon: Database, items: ["Node.js", "Python", "Go", "Rust", "GraphQL"], color: "from-green-400 to-emerald-500" },
-    { name: "Mobile", icon: Smartphone, items: ["React Native", "Flutter", "Swift", "Kotlin", "Ionic"], color: "from-indigo-400 to-purple-500" },
+    { name: "Frontend", icon: Code2, items: ["React", "TypeScript", "Next.js", "Vite.Js", "Tailwindcss"], color: "from-cyan-400 to-blue-500" },
+    { name: "Backend", icon: Database, items: ["Node.js", "Java"], color: "from-green-400 to-emerald-500" },
+    { name: "Banco de Dados", icon: Smartphone, items: ["SQL", "SQLite"], color: "from-indigo-400 to-purple-500" },
+    { name: "Design / UI-UX", icon: Pencil, items: ["Figma"], color: "from-pink-400 to-rose-500" }
   ];
+
 
   // Particle system initialization
   useEffect(() => {
@@ -141,7 +144,7 @@ const TechPortfolio: React.FC = () => {
         ...particle,
         x: particle.x + particle.vx,
         y: particle.y + particle.vy,
-       
+
       })));
       animationRef.current = requestAnimationFrame(animate);
     };
@@ -371,8 +374,8 @@ const TechPortfolio: React.FC = () => {
                   especializado em criar experiências digitais que transcendem o comum.
                 </p>
                 <p>
-                  Minha jornada começou com curiosidade sobre <span className="text-purple-400 font-semibold">inteligência artificial</span>
-                  e evoluiu para dominar tecnologias emergentes como Web3, realidade virtual e computação quântica.
+                  Minha jornada começou com curiosidade sobre <span className="text-purple-400 font-semibold">desenvolvimento front-end </span>
+                  e evoluiu para dominar tecnologias emergentes como Web.
                 </p>
               </div>
             </div>
@@ -390,16 +393,6 @@ const TechPortfolio: React.FC = () => {
                     Meu objetivo é construir soluções que não apenas resolvem problemas, mas
                     <span className="text-cyan-400 font-semibold"> inspiram e transformam</span> a forma como interagimos com o mundo digital.
                   </p>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="text-center p-4 bg-black/30 rounded-lg">
-                      <div className="text-2xl font-bold text-cyan-400">150+</div>
-                      <div className="text-sm text-gray-400">Clientes Satisfeitos</div>
-                    </div>
-                    <div className="text-center p-4 bg-black/30 rounded-lg">
-                      <div className="text-2xl font-bold text-purple-400">25+</div>
-                      <div className="text-sm text-gray-400">Tecnologias</div>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -604,62 +597,12 @@ const TechPortfolio: React.FC = () => {
       {/* Contact Section */}
       <section id="contato" className="py-20 relative z-10">
         <div className="max-w-4xl mx-auto px-6">
-
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl p-8 border border-cyan-500/20">
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Rocket className="w-6 h-6 text-cyan-400" />
-                  Projetos & Consultorias
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Desenvolvimento de aplicações web/mobile, consultoria em IA, arquitetura de sistemas e muito mais.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    Disponível para projetos
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    Resposta em 24h
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                    Consulta gratuita
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-purple-500/20">
-                <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Brain className="w-6 h-6 text-purple-400" />
-                  Colaborações & Parcerias
-                </h3>
-                <p className="text-gray-300 mb-6">
-                  Interessado em colaborar? Sempre aberto a parcerias estratégicas e projetos inovadores.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                    Startups & Scale-ups
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
-                    Projetos Open Source
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-400">
-                    <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-                    Mentorias & Workshops
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Contatos
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto mb-3"></div>
           </div>
-
           <div className="text-center">
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-8">
               <a
@@ -690,7 +633,7 @@ const TechPortfolio: React.FC = () => {
             </div>
 
             <p className="text-gray-400 text-sm">
-              Geralmente respondo em algumas horas. Vamos conversar sobre seu próximo projeto!
+              Geralmente respondo em algumas horas. Vamos conversar!
             </p>
           </div>
         </div>
@@ -710,7 +653,7 @@ const TechPortfolio: React.FC = () => {
             </div>
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-sm">
-                © 2025 Jefferson Silva. Crafted with ❤️ using React, TypeScript & Tailwind CSS.
+                © 2025 Jefferson Silva. Criado com ❤️ usando React, TypeScript & Tailwind CSS.
               </p>
               <p className="text-gray-500 text-xs mt-1">
                 Powered by cutting-edge technologies and endless curiosity.
